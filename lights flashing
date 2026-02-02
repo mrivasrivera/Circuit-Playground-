@@ -1,0 +1,36 @@
+import time
+import board
+import neopixel
+
+# Calls the circuit Python neopixel library, specifies the default board 
+# pins for the Neopixels, and the number of neopixels to access.  Returns a 
+# list 'pixels' of indexable neopixles
+pixels = neopixel.NeoPixel(board.NEOPIXEL,10)
+
+while True:
+    # indexes the first element of the 'pixels' list and points to the 
+    # first (and only) Neopixel in the 'pixels' list
+    pixels[0]=(255, 0, 0)
+    time.sleep(0.5)
+    pixels.fill((0, 0, 0))
+    time.sleep(0.5)
+    pixels[1]=(0,120,0)
+    time.sleep(0.5)
+    pixels.fill((0,0,0))
+    time.sleep(0.5)
+    pixels[2]=(0,0,100)
+    time.sleep(0.5)
+    pixels.fill((0,0,0))
+    time.sleep(0.5)
+    pixels[3] = (70,90,10)
+    time.sleep(0.5)
+    pixels.fill((0,0,0))
+    time.sleep(0.5)
+    pixels[4] = (40,20,60)
+    time.sleep(0.5)
+    pixels.fill ((0,0,0))
+    time.sleep(0.5)
+    pixels.fill((100,100,0))
+    time.sleep(0.7)
+    pixels.fill((0,0,0))
+    
